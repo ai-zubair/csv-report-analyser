@@ -1,0 +1,19 @@
+{
+  "name": "csv-report-analyser",
+  "version": "1.0.0",
+  "description": "Generate a report for a CSV file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ai-zubair/csv-report-analyser.git"
+  },
+  "author": "Zubair Bashir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ai-zubair/csv-report-analyser/issues"
+  },
+  "homepage": "https://github.com/ai-zubair/csv-report-analyser#readme"
+}
