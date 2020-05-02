@@ -9,10 +9,16 @@ interface Reporter{
 }
 
 class Summary{
+  matchAnalysis: string = "";
 
   constructor(
     public analyser: Analyser,
     public reporter: Reporter){}
+
+  analyseAndReport(matchData: MatchTuple[]): void{
+    this.matchAnalysis = this.analyser.runAnalysis(matchData);
+    this.reporter.printReport(this.matchAnalysis);
+  }
 
 }
 

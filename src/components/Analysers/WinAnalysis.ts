@@ -8,13 +8,13 @@ class WinAnalysis implements Analyser{
   runAnalysis(matchData: MatchTuple[]): string{
     let teamMatchesWon = 0;
     for (const match of matchData) {
-      if((match[MATCH_STATS.HOME_TEAM] === "Man United" && match[MATCH_STATS.MATCH_RESULT] === RESULT.HOME_WIN)||
-         (match[MATCH_STATS.AWAY_TEAM] === "Man United" && match[MATCH_STATS.MATCH_RESULT] === RESULT.AWAY_WIN))
+      if((match[MATCH_STATS.HOME_TEAM] === this.teamName && match[MATCH_STATS.MATCH_RESULT] === RESULT.HOME_WIN)||
+         (match[MATCH_STATS.AWAY_TEAM] === this.teamName && match[MATCH_STATS.MATCH_RESULT] === RESULT.AWAY_WIN))
       {
         teamMatchesWon++;
       }
     }
-    return `The team ${this.teamName} has won ${teamMatchesWon} matches this season.`
+    return `Team ${this.teamName} has won ${teamMatchesWon} matches this season.`
   }
 
 }
