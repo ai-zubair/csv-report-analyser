@@ -1,6 +1,6 @@
 import { CSVfileReader } from "./components/CSVfileReader";
 import { MatchReader } from "./components/MatchReader";
-import { MATCH_STATS, RESULT } from "./components/AppContants";
+import { MATCH_STATS, RESULT } from "./components/Types";
 
 const genericReader = new CSVfileReader("football.csv");
 const matchReader = new MatchReader(genericReader);
@@ -15,4 +15,4 @@ for (const match of matchReader.parsedData) {
   }
 }
 
-console.log("Man United has Won",matchesWon,"matches ");
+console.log("Man United has Won",matchesWon,"matches this year");

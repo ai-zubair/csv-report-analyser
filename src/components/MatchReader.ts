@@ -1,7 +1,5 @@
 import { dateStringToDate } from "./Utils";
-import { RESULT } from "./AppContants";
-
-type MatchTuple = [Date, string, string, number, number, RESULT, string];
+import { MatchTuple, RESULT } from "./Types";
 
 interface DataReader{
   data: string[][];

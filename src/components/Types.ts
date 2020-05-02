@@ -10,4 +10,14 @@ enum RESULT{
   DRAW     = "D",
 }
 
-export { MATCH_STATS, RESULT };
+type MatchTuple = [
+  Date,
+  string,
+  string,
+  number,
+  number,
+  RESULT,
+  string
+];
+
+export { MatchTuple, MATCH_STATS, RESULT };
