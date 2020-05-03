@@ -1,5 +1,6 @@
 import { dateStringToDate } from "./Utils";
 import { MatchTuple, RESULT } from "./Types";
+import { CSVfileReader } from "./CSVfileReader";
 
 interface DataReader{
   data: string[][];
@@ -9,6 +10,12 @@ interface DataReader{
 class MatchReader{
   parsedData: MatchTuple[] = [];
 
+  static readFromCSV(filename: string): MatchReader{
+    return new MatchReader(
+      new CSVfileReader(filename)
+    );
+  }
+  
   constructor(public reader: DataReader){}
 
   load(): void {

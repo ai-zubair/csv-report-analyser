@@ -1,4 +1,6 @@
 import { MatchTuple } from "./Types";
+import { ConsoleReport } from "./Reporters/ConsoleReport";
+import { WinAnalysis } from "./Analysers/WinAnalysis";
 
 interface Analyser{
   runAnalysis(matchData: MatchTuple[]): string;
@@ -10,6 +12,13 @@ interface Reporter{
 
 class Summary{
   matchAnalysis: string = "";
+
+  static createWinConsoleReport(teamname: string): Summary{
+    return new Summary(
+      new WinAnalysis(teamname),
+      new ConsoleReport()
+    );
+  }
 
   constructor(
     public analyser: Analyser,
